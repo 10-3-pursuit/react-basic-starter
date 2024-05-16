@@ -4,11 +4,11 @@ import AboutTheDevs from "./pages/AboutTheDevs";
 
 const App = () => {
   return (
-    < Routes >
+    <Routes>
+      {/* <Route path="/" element={}/> */}
       <Route path="/about" element={<AboutTheDevs />}></Route>
-    </Routes >
-  )
-
+    </Routes>
+  );
 };
 
 export default App;
