@@ -1,7 +1,14 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
+import AboutTheDevs from "./pages/AboutTheDevs";
 
 const App = () => {
-  return <div>Basic Pursuit React Starter</div>;
+  return (
+    < Routes >
+      <Route path="/about" element={<AboutTheDevs />}></Route>
+    </Routes >
+  )
+
 };
 
 export default App;
