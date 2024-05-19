@@ -30,20 +30,25 @@ const NavBar = () => {
             collapsed ? "hidden" : ""
           }`}
         >
-          Smart Waste
+          <span className="text-green-300">S</span>
+          <span className="text-amber-300">m</span>
+          <span className="text-red-300">a</span>
+          <span className="text-blue-300">r</span>
+          <span className="text-purple-300">t</span> Waste
         </Link>
         <div className="flex flex-col">
-          <button
+          <Link
+            to={"/about_smart_waste"}
             disabled={collapsed}
-            className={`bg-white py-6 hover:bg-black hover:text-white font-semibold ${
+            className={`bg-white py-6 hover:bg-black hover:text-white font-semibold text-center ${
               collapsed ? "hidden" : ""
             }`}
           >
             About
-          </button>
+          </Link>
           <button
             disabled={collapsed}
-            className={`bg-green-300 py-6 hover:bg-black hover:text-white font-semibold ${
+            className={`bg-green-300 py-6 hover:bg-black hover:text-white font-semibold text-center ${
               collapsed ? "hidden" : ""
             }`}
           >
@@ -51,7 +56,7 @@ const NavBar = () => {
           </button>
           <button
             disabled={collapsed}
-            className={`bg-amber-300 py-6 hover:bg-black hover:text-white font-semibold ${
+            className={`bg-amber-300 py-6 hover:bg-black hover:text-white font-semibold text-center ${
               collapsed ? "hidden" : ""
             }`}
           >
@@ -59,7 +64,7 @@ const NavBar = () => {
           </button>
           <button
             disabled={collapsed}
-            className={`bg-red-300 py-6 hover:bg-black hover:text-white font-semibold ${
+            className={`bg-red-300 py-6 hover:bg-black hover:text-white font-semibold text-center ${
               collapsed ? "hidden" : ""
             }`}
           >
@@ -67,7 +72,7 @@ const NavBar = () => {
           </button>
           <button
             disabled={collapsed}
-            className={`bg-blue-300 py-6 hover:bg-black hover:text-white font-semibold ${
+            className={`bg-blue-300 py-6 hover:bg-black hover:text-white font-semibold text-center ${
               collapsed ? "hidden" : ""
             }`}
           >

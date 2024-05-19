@@ -29,9 +29,12 @@ const Home = () => {
               <p className="text-lg md:text-xl mb-8">
                 Conscious waste management for NYC residents WHO CARE!
               </p>
-              <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300">
+              <Link
+                className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300"
+                to={"/about_smart_waste"}
+              >
                 Learn More
-              </button>
+              </Link>
             </div>
           </div>
         </div>
