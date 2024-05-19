@@ -54,8 +54,8 @@ const SharpsCategory = () => {
   return (
     <div className="min-h-screen mb-0">
       <div className="grid grid-cols-1 md:grid-cols-5">
-        <div className="bg-neutral-100 col-span-1 md:col-span-3">
-          <div className=" bg-red-500/75 m-5 rounded-xl overflow-y-auto h-3/4">
+        <div className="bg-white col-span-1 md:col-span-3">
+          <div className=" bg-red-300 m-5 rounded-xl overflow-y-auto h-3/4">
             <div className="text-4xl mt-10 mx-5 mb-3">
               Sharps & Medical Waste Category
             </div>
@@ -117,17 +117,17 @@ const SharpsCategory = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-1 md:col-span-2 bg-neutral-100">
-          <div className="bg-neutral-300 m-5 rounded-xl">
-            <div className="text-3xl py-7 mx-5 text-center">
+        <div className="col-span-1 md:col-span-2 bg-white">
+          <div className="bg-black m-5 rounded-xl">
+            <div className="text-3xl py-7 mx-5 text-center text-white">
               Waste Drop Off Sites
             </div>
-            <hr className="border-4 border-black mb-10 mx-5 rounded" />
+            <hr className="border-4 border-white mb-10 mx-5 rounded" />
             <div className="overflow-y-auto h-72 grid gap-4 hover:overflow-scroll">
               {/* //THIS ONE! */}
               {allSharpsAndMedicalDropOffLocations.map((location) => (
                 <div key={location.id}>
-                  <div className="bg-red-400/60 mx-5 rounded-lg px-5 py-7 hover:scale-105 transition-transform duration-300">
+                  <div className="bg-red-300 mx-5 rounded-lg px-5 py-7 hover:scale-105 transition-transform duration-300">
                     <div className="font-semibold">{location.sitename}</div>
                     <div>Borough: {location.borough}</div>
                     <div>Neighborhood: {location.ntaname}</div>
@@ -147,7 +147,7 @@ const SharpsCategory = () => {
                 </div>
               ))}
             </div>
-            <div className="text-center py-5">
+            <div className="text-center py-5 text-white">
               {allSharpsAndMedicalDropOffLocations.length - 1} Locations
             </div>
           </div>

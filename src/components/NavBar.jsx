@@ -73,14 +73,15 @@ const NavBar = () => {
           >
             Recycling
           </button>
-          <button
+          <Link
+            to={"/meet_the_team"}
             disabled={collapsed}
-            className={`bg-purple-300 py-6 hover:bg-black hover:text-white font-semibold ${
+            className={`bg-purple-300 py-6 hover:bg-black hover:text-white font-semibold text-center ${
               collapsed ? "hidden" : ""
             }`}
           >
             The Team
-          </button>
+          </Link>
           <div
             className={`text-white text-center mt-9 ${
               collapsed ? "hidden" : ""
