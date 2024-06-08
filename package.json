@@ -1,5 +1,5 @@
 {
-  "name": "basic-react-starter",
+  "name": "brief bites",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,7 +12,9 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.2.1"
+    "react-router-dom": "^6.2.1",
+    "fast-xml-parser": "^4.4.0",
+    "openai": "^4.49.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
