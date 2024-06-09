@@ -1,7 +1,8 @@
 import { useState, useEffect, createContext } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom"
 import { getNYTArticles } from "./fetch";
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuContent, NavigationMenuLink } from "@radix-ui/react-navigation-menu";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuContent, NavigationMenuLink, NavigationMenuTrigger } from "@radix-ui/react-navigation-menu";
+import './Section.css';
 import main from './OpenAi'
 
 
@@ -31,14 +32,12 @@ const Section = ({ sections }) => {
             <NavigationMenu>
                 <NavigationMenuList>
                     <NavigationMenuItem>
-                        <Link to={'/'}>
-                            <NavigationMenuLink>Home</NavigationMenuLink>
-                        </Link>
+                        <NavigationMenuLink>
+                        <Link className='home-link' to={'/'}>Home</Link>
+                        </NavigationMenuLink>
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
-            {/* <Link to='/'>
-            </Link> */}
             <h1>{sections[id]}</h1>
             {articles.length > 0 && articles.map(article =>
                 <li key={article.slug_name}>
@@ -53,4 +52,4 @@ const Section = ({ sections }) => {
     )
 }
 
-export default Section  
+export default Section; 
