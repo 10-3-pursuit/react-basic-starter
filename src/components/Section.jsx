@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom";
 import { getNYTArticles } from "./fetch";
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuContent, NavigationMenuLink } from "@radix-ui/react-navigation-menu";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuContent, NavigationMenuLink, NavigationMenuTrigger } from "@radix-ui/react-navigation-menu";
+import './Section.css';
 
 const Section = ({ sections }) => {
     const [articles, setArticles] = useState([]);
@@ -18,23 +19,21 @@ const Section = ({ sections }) => {
             <NavigationMenu>
                 <NavigationMenuList>
                     <NavigationMenuItem>
-                        <Link to={'/'}>
-                            <NavigationMenuLink>Home</NavigationMenuLink>
-                        </Link>
+                        <NavigationMenuLink>
+                        <Link className='home-link' to={'/'}>Home</Link>
+                        </NavigationMenuLink>
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
-            {/* <Link to='/'>
-            </Link> */}
             <h1>{sections[id]}</h1>
-            {articles.length > 0 && articles.map(article =>
+            {articles.length > 0 ? articles.map(article =>
                 <li key={article.guid}>
                     <Link to={article.link} target="_blank">{article.title}</Link>
                     <p>{article.description}</p>
                     <p>{article['media:description']}</p>
-                </li>)}
+                </li>) : 'No articles to show'}
         </div>
     )
 }
 
-export default Section  
+export default Section; 
