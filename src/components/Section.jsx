@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom"
 import { getNYTArticles } from "./fetch";
-// import { main } from "./openai-api";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuContent, NavigationMenuLink } from "@radix-ui/react-navigation-menu";
 
 const Section = ({ sections }) => {
     const [articles, setArticles] = useState([]);
@@ -11,13 +11,21 @@ const Section = ({ sections }) => {
         getNYTArticles(sections[id]).then((arts) => {
             setArticles(arts);
         }).catch((err) => console.error(err));
-        // const response = main(articles[0].link);
-        // console.log(response);
     }, []);
 
     return (
         <div>
-            <Link to='/'>Home</Link>
+            <NavigationMenu>
+                <NavigationMenuList>
+                    <NavigationMenuItem>
+                        <Link to={'/'}>
+                            <NavigationMenuLink>Home</NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
+                </NavigationMenuList>
+            </NavigationMenu>
+            {/* <Link to='/'>
+            </Link> */}
             <h1>{sections[id]}</h1>
             {articles.length > 0 && articles.map(article =>
                 <li key={article.guid}>
